@@ -48,4 +48,9 @@ Spring boot 3 + Angular 16 application for Xtramile coding test
    To run the produced application, go to target directory then you can run this command
    ```bash
     java -jar xtramile-java-test-0.0.1-SNAPSHOT.jar
+
+5. **App Preview**
+   
+   <img width="866" alt="image" src="https://github.com/cfathoni/xtramile-java-test/assets/11036827/9812dfad-e2a6-437d-bbd7-07b064df22b4">
+
    
