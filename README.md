@@ -32,12 +32,14 @@ Spring boot 3 + Angular 16 application for Xtramile coding test
    ```bash
    git clone https://github.com/cfathoni/xtramile-java-test.git
 
-2. **Build Project**
+2. **Build Angular Project**
 
    To build angular project you can go to src/main/frontend/xtramile-frontend then run
     ```bash
     npm install
     ng build --configuration=production
+    
+3. **Build Spring Boot Project**    
 
    To build spring boot project from the root directory of this project you can run
    ```bash
@@ -50,6 +52,8 @@ Spring boot 3 + Angular 16 application for Xtramile coding test
     java -jar xtramile-java-test-0.0.1-SNAPSHOT.jar
 
 5. **App Preview**
+   
+   To see the pages just go to http://localhost:8080 and you will see the pages below
    
    <img width="866" alt="image" src="https://github.com/cfathoni/xtramile-java-test/assets/11036827/9812dfad-e2a6-437d-bbd7-07b064df22b4">
 
