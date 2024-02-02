@@ -1,0 +1,19 @@
+<app-patient-data
+  [pages]="pages"
+  [activePage]="page"
+  [totalData]="totalData"
+  [patients]="patients"
+  (activePageChanged)="retrievePatientsData($event)"
+  (edit)="showPatientFormModal($event)"
+  (delete)="showDeleteModal($event)"
+  (search)="search($event)"/>
+<app-delete-notice
+  *ngIf="deleteModalShown"
+  [patientId]="currentPatientId"
+  (delete)="deletePatient($event)"
+  (close)="hideDeleteModal()" />
+<app-patient-form
+  *ngIf="patientFormModalShown"
+  [patient]="patient"
+  (save)="savePatient($event)"
+  (close)="hidePatientFormModal()" />

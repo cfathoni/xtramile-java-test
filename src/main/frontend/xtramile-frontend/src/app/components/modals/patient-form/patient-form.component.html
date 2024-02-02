@@ -1,0 +1,66 @@
+<ng-container *ngIf="patient">
+  <div class="blur-effect"></div>
+  <div class="modal fade show">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div>
+          <div class="modal-header">
+            <div class="modal-title">Patient Data</div>
+            <button type="button" class="close" (click)="close.emit()">×</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" class="form-control" [(ngModel)]="patient.firstName" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" class="form-control" [(ngModel)]="patient.lastName" />
+            </div>
+            <div class="form-group">
+              <label>Date of Birth</label>
+              <input type="date" class="form-control" [(ngModel)]="patient.dateOfBirth" />
+            </div>
+            <div class="form-group">
+              <label>Select</label>
+              <select class="form-control" [(ngModel)]="patient.gender">
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Address</label>
+              <input type="text" class="form-control" [(ngModel)]="patient.australianAddress.address" />
+            </div>
+            <div class="form-group">
+              <label>Suburb</label>
+              <input type="text" class="form-control" [(ngModel)]="patient.australianAddress.suburb" />
+            </div>
+            <div class="form-group">
+              <label>State</label>
+              <input type="text" class="form-control" [(ngModel)]="patient.australianAddress.state" />
+            </div>
+            <div class="form-group">
+              <label>Postal Code</label>
+              <input type="text" class="form-control" [(ngModel)]="patient.australianAddress.postcode" />
+            </div>
+            <div class="form-group">
+              <label>Phone No</label>
+              <input type="text" class="form-control" [(ngModel)]="patient.phoneNo" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-container">
+              <input type="button" class="btn" value="Cancel" (click)="close.emit()" />
+              <input type="button" class="btn btn-info" value="Save" (click)="proceedSave()" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<app-alert
+  *ngIf="alertShown"
+  [message]="'Please fill all data'"
+  (close)="hideAlert()" />

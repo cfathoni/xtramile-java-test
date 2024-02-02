@@ -1,0 +1,26 @@
+<div class="blur-effect"></div>
+<div class="modal fade show">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <div class="modal-title">Delete Patient Data</div>
+          <button type="button" class="close" (click)="close.emit()">×</button>
+        </div>
+        <div class="modal-body no-scroll">
+          <p>Are you sure you want to delete these data?</p>
+          <p class="text-warning"><small>This action cannot be undone.</small></p>
+        </div>
+        <div class="modal-footer">
+          <div class="btn-container">
+            <input type="button" class="btn" value="Cancel" (click)="close.emit()" />
+            <input type="button"
+               class="btn btn-danger"
+               value="Delete"
+               (click)="delete.emit(patientId)" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

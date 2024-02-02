@@ -1,0 +1,21 @@
+<div class="blur-effect alert"></div>
+<div class="modal fade show alert">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <div class="modal-title">Delete Patient Data</div>
+          <button type="button" class="close" (click)="close.emit()">×</button>
+        </div>
+        <div class="modal-body no-scroll">
+          <p>{{message}}</p>
+        </div>
+        <div class="modal-footer">
+          <div class="btn-container">
+            <input type="button" class="btn" value="Close" (click)="close.emit()">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
